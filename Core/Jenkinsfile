@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    options {
+        timeout(10)
+    }
+
+
+    stages {
+        stage('Make Folder') {
+            steps {
+                sh "mkdir /home/core"
+            }
+        }
+    }
+}
