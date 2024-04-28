@@ -8,8 +8,9 @@ pipeline {
     }
 
     stages {
-        stage('Make Folder') {
+        stage('Make Directory') {
             steps {
+                sh "rm -rf /home/core" // To make sure directory does not exist!
                 sh "mkdir /home/core"
             }
         }
