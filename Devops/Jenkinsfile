@@ -3,8 +3,12 @@ pipeline {
         label 'agent88'
     }
 
+    options {
+        buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '20')
+    }
+
     triggers {
-    cron '*/10 * * * *'
+        cron '*/10 * * * *'
     }
 
     stages {
